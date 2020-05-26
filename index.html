@@ -36,7 +36,7 @@
       }
     </style>
   </head>
-  <body class="bg-light">
+  <body class="bg-light" onload="delPersonal()">
     <div class="container">
   <div class="py-5 text-center">
     <img class="d-block mx-auto mb-4" src="icon.ico" alt="" width="72" height="72">
@@ -44,24 +44,23 @@
     <p class="lead">A Lucrative way to build your resume in few easy steps</p>
   </div>
 
- 
+ <center>
     <div class="col-md-8 order-md-1">
       <h4 class="mb-3">Personal Details</h4>
       <form class="needs-validation" id="frm1" NAME="yourform">
-        <div class="row">
-          <div class="col-md-6 mb-3">
+      
+          <div class="mb-3">
             <label for="firstName">Your Name Here</label>
             <input type="text" class="form-control" id="firstName" name = "naam" value="" required>
          </div>
-         </div>
-
-         <div class="row" style="margin-left: 0.4%;"> 
+        
+         
         <div class="mb-3">
-          <label for="c1">Contact No. (including country code)</label>
+          <label for="c1">Contact No.  <span class="text-muted">(including country code)<span></label>
             <input type="text" class="form-control" id="c1" name = "phone" required>
             
           </div>
-        </div>
+  
 
         <div class="mb-3">
           <label for="email">Email </label>
@@ -71,7 +70,7 @@
 
 
         <div class="mb-3">
-          <label for="address1">Address<span class="text-muted">(including state and country)</span></label>
+          <label for="address1">Address <span class="text-muted">(including state and country)</span></label>
           <input type="text" class="form-control" id="address1" name = "pata">
         </div>
        
@@ -115,6 +114,8 @@
       <br> -->
 
         <button class="btn btn-primary btn-lg btn-block" type="submit" id="myF">Submit Resume</button>
+        <br>
+        <button class="btn btn-primary btn-lg btn-block" type="submit" id="myF2">Clear Resume</button>
       </form>
       <br>
       <form action = "result.html">
@@ -122,6 +123,8 @@
       </form>
     </div>
   </div>
+
+</center>
    <hr class="mb-4">
   <footer class="my-5 pt-5 text-muted text-center text-small">
     <p class="mb-1">&copy; Dhruv Bhatt</p>
