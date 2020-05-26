@@ -30,3 +30,10 @@ function addPersonal(e){
 	e.preventDefault();
  }
 
+ var b = document.getElementById('myF2').addEventListener('click', delPersonal);
+
+ function delPersonal(){
+ 	localStorage.clear();
+ 	document.getElementById('frm1').reset();
+ }
+
