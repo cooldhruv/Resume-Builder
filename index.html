@@ -36,7 +36,7 @@
       }
     </style>
   </head>
-  <body class="bg-light" onload="delPersonal()">
+  <body class="bg-light" >
     <div class="container">
   <div class="py-5 text-center">
     <img class="d-block mx-auto mb-4" src="icon.ico" alt="" width="72" height="72">
@@ -49,7 +49,7 @@
       <h4 class="mb-3">Personal Details</h4>
       <form class="needs-validation" id="frm1" NAME="yourform">
       
-          <div class="mb-3">
+          <!-- <div class="mb-3">
             <label for="firstName">Your Name Here</label>
             <input type="text" class="form-control" id="firstName" name = "naam" value="" required>
          </div>
@@ -78,8 +78,9 @@
           <label for="address2">Other Online Presence<span class="text-muted"></span></label>
           <input type="text" class="form-control" id="op1" name = "jaankari">
         </div>
+        <br>
      
-     <!--  <h4 class="mb-3">Educational Details</h4>
+      <h4 class="mb-3">Educational Details</h4>
        <div class="mb-3">
           <label for="q1">Qualification:<span class="text-muted"></span></label>
           <input type="text" class="form-control" id="q1" placeholder="">
@@ -93,10 +94,12 @@
          <div class="mb-3">
           <label for="perc1">Percentage:<span class="text-muted"></span></label>
           <input type="text" class="form-control" id="perc1" placeholder="">
-        </div> -->
+        </div>
+ -->
+        <div class="mb3" id="ski" style="width: 100%; " ></div>
       
-        <!--  <br>
-        <center>
+         <br>
+        <!-- <center>
       <button class="btn btn-primary" id="flwork" onclick="workflag();" style="width: 14em;">Add Work Experience</button>
       </center>
             <br>
@@ -105,13 +108,12 @@
       <button class="btn btn-primary" id="flpro" onclick="projectflag();" style="width: 14em;">Add Projects</button>
       </center>
       <br>
-     
+      -->
 
-             <center>
-      <button class="btn btn-primary" id="flskill" onclick="skillFlag();" style="width: 14em;">Add Skills</button>
-      </center>
+      <input type="button" class="btn btn-primary" id="flskill"  style="width: 14em;" value="Add Skill"></input>
+      
       <br>
-      <br> -->
+      <br>
 
         <button class="btn btn-primary btn-lg btn-block" type="submit" id="myF">Submit Resume</button>
         <br>
@@ -132,6 +134,8 @@
   </footer>
 </div>
 
-<script type="text/javascript" src="creator.js"></script>
+
 </body>
+<script type="text/javascript" src="creator.js"></script>
 </html>
+
