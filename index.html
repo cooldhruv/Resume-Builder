@@ -49,7 +49,7 @@
       <h4 class="mb-3">Personal Details</h4>
       <form class="needs-validation" id="frm1" NAME="yourform">
       
-          <!-- <div class="mb-3">
+          <div class="mb-3">
             <label for="firstName">Your Name Here</label>
             <input type="text" class="form-control" id="firstName" name = "naam" value="" required>
          </div>
@@ -64,18 +64,18 @@
 
         <div class="mb-3">
           <label for="email">Email </label>
-          <input type="email" class="form-control" id="email1" name = "mail">
+          <input type="email" class="form-control" id="email1" name = "mail" required>
         </div>
 
 
 
         <div class="mb-3">
           <label for="address1">Address <span class="text-muted">(including state and country)</span></label>
-          <input type="text" class="form-control" id="address1" name = "pata">
+          <input type="text" class="form-control" id="address1" name = "pata" required>
         </div>
        
        <div class="mb-3">
-          <label for="address2">Other Online Presence<span class="text-muted"></span></label>
+          <label for="address2">Other Online Presence<span class="text-muted">(Optional)</span></label>
           <input type="text" class="form-control" id="op1" name = "jaankari">
         </div>
         <br>
@@ -95,7 +95,7 @@
           <label for="perc1">Percentage:<span class="text-muted"></span></label>
           <input type="text" class="form-control" id="perc1" placeholder="">
         </div>
- -->
+
         <div class="mb3" id="ski" style="width: 100%; " ></div>
       
          <br>
@@ -109,16 +109,49 @@
       </center>
       <br>
       -->
+  <h3>Skill Details</h3>
+       </form >
+       
+       <form id = "skiform" name = "skillform">
+        <div class="mb-3">
+          <label for="i1">Skill :<span class="text-muted"></span></label>
+          <input type="text" class="form-control" id="s1" placeholder="">
+        </div>
+       
+         <div class="mb-3">
+          <label for="perc1">Proficiency:<span class="text-muted"></span></label>
+          <input type="text" class="form-control" id="sl1" placeholder="beginner , intermediate, expert, pro">
+        </div>
 
       <input type="button" class="btn btn-primary" id="flskill"  style="width: 14em;" value="Add Skill"></input>
-      
+      </form>
+<br>
+<br>
+      <form id = "wform" name = "skillform">
+        <h3>Work Details</h3>
+        <div class="mb-3">
+          <label for="com1">Company <span class="text-muted">(With Duration in brackets)</span> :</label>
+          <input type="text" class="form-control" id="com1" placeholder="">
+        </div>
+        <div class="mb-3">
+          <label for="com1">Your Role <span class="text-muted"></span> :</label>
+          <input type="text" class="form-control" id="role1" placeholder="">
+        </div>
+       
+         <div class="mb-3">
+          <label for="wordes1">Description: <span class="text-muted"></span></label>
+          <textarea style="border: 0px; width: 100%; height: 10em; border: solid 1px lightgray; border-radius: 5%" id="wordes1"></textarea>
+        </div>
+
+      <input type="button" class="btn btn-primary" id="flwork"  style="width: 14em;" value="Add Work-Experience"></input>
+      </form>
       <br>
       <br>
 
         <button class="btn btn-primary btn-lg btn-block" type="submit" id="myF">Submit Resume</button>
         <br>
         <button class="btn btn-primary btn-lg btn-block" type="submit" id="myF2">Clear Resume</button>
-      </form>
+     
       <br>
       <form action = "result.html">
         <button class="btn btn-primary btn-lg btn-block" type="submit">See Resume</button>
@@ -138,4 +171,3 @@
 </body>
 <script type="text/javascript" src="creator.js"></script>
 </html>
-
