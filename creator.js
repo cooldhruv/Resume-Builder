@@ -2,19 +2,9 @@ var a = document.getElementById('myF').addEventListener('click', addPersonal);
 
 //var b = document.getElementById('bt2').addEventListener('click',display);
 
-var b = document.getElementById('flskill').addEventListener('click',skillFlag);
+var b = document.getElementById('flskill').addEventListener('click',skillAdd);
 var c = document.getElementById('myF2').addEventListener('click',clear);
-var skill_flag = 0;
-
-function skillFlag(y){
-	skill_flag++;
-	skillEnter();
-	return skill_flag;
-
-
-
-y.preventDefault();
-}
+var d = document.getElementById('flwork').addEventListener('click',workAdd);
 
 
 function addPersonal(e){
@@ -27,14 +17,7 @@ function addPersonal(e){
 	var qualification = document.getElementById('q1').value;
 	var institute = document.getElementById('i1').value;
 	var percentage = document.getElementById('perc1').value;
-	var skilla = [];
-	var skillb = [];
-
-	for(var i=1;i<=skill_flag;i++){
-		skilla[i] = document.getElementById("skillera\''+i+'\'").value;
-		skillb[i] = document.getElementById("skillerb\''+i+'\'").value;
-	}
-
+	
 	ar.push(name);
 	ar.push(contact);
 	ar.push(email);
@@ -44,10 +27,7 @@ function addPersonal(e){
 	ar.push(institute);
 	ar.push(percentage);
 	
-	for(var i=1;i<=skill_flag;i++){
-		ar.push(skilla[i]); 
-		ar.push(skillb[i]); 
-	}
+	
 	
 	  localStorage.setItem('session',JSON.stringify(ar));
 
@@ -60,34 +40,57 @@ function addPersonal(e){
 	e.preventDefault();
  }
 
- // var b = document.getElementById('myF2').addEventListener('click', delPersonal);
-
- // function delPersonal(){
- // 	localStorage.clear();
- // 	document.getElementById('frm1').reset();
- // }
-
-
-function skillEnter(){
-	
-	var skiller = document.getElementById('ski');
-
- skiller.innerHTML = '';
-
-
-	for(var i=1;i<=skill_flag;i++){
-	skiller.innerHTML += '<label>'+'Skill \''+i+'\': '+'</label>'+' '+
-          '<input type="text"  id="skillera\''+i+'\'" placeholder="" class="form-control">'+'</input>'+
-          '<label >'+'Proficiency in Skill \''+i+'\': '+'</label>'+' '+
-          '<input type="text"  id="skillerb\''+i+'\'" placeholder="(in range 0-100)" class="form-control">'+'</input>'+'<br>'
-		}
-
-	skiller.innerHTML+='<br>'	
+var skill = [[]];
  
-     }     
+
+ skill[0] = new Array();
+skill[1] = new Array();
+
+function skillAdd(){
+	
+	skill[0].push(document.getElementById('s1').value);
+	skill[1].push(document.getElementById('sl1').value.toLowerCase());
+	
+	var confirmation = confirm('A new skill added to skill set,  do you want to add more skills to your resume ?');
+
+	if(confirmation===false){
+		localStorage.setItem('skillName',JSON.stringify(skill[0]));
+		localStorage.setItem('skillLevel',JSON.stringify(skill[1]));
+	}
+
+	else{
+	document.getElementById("skiform").reset();
+	}
+
+
+
+return skill;
+}
+
+var work = [[]];
+work[0] = new Array();
+work[1] = new Array();
+work[2] = new Array();
+ 
+function workAdd(){
+	work[0].push(document.getElementById('com1').value);
+	work[1].push(document.getElementById('wordes1').value.toUpperCase());
+	work[2].push(document.getElementById(''))
+	
+	var confirmation = confirm('A new work desciption added to skill set,  do you want to add more work-descriptions to your resume ?');
+
+	if(confirmation===false){
+		localStorage.setItem('workName',JSON.stringify(work[0]));
+		localStorage.setItem('workDesc',JSON.stringify(work[1]));
+	}
+
+	else{
+	document.getElementById("wform").reset();
+	}
+}
+
 
 
 function clear(){
 	localStorage.clear();
 }
-
