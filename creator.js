@@ -17,12 +17,14 @@ function addPersonal(e){
 	var qualification = document.getElementById('q1').value;
 	var institute = document.getElementById('i1').value;
 	var percentage = document.getElementById('perc1').value;
+	var ro = document.getElementById('ro1').value;
 	
 	ar.push(name);
 	ar.push(contact);
 	ar.push(email);
 	ar.push(address);
 	ar.push(other);
+	ar.push(ro);
 	ar.push(qualification);
 	ar.push(institute);
 	ar.push(percentage);
@@ -67,27 +69,47 @@ function skillAdd(){
 return skill;
 }
 
+
+
+
+
+
+
 var work = [[]];
+ 
+
 work[0] = new Array();
 work[1] = new Array();
 work[2] = new Array();
- 
+work[3] = new Array();
+
 function workAdd(){
-	work[0].push(document.getElementById('com1').value);
-	work[1].push(document.getElementById('wordes1').value.toUpperCase());
-	work[2].push(document.getElementById(''))
 	
-	var confirmation = confirm('A new work desciption added to skill set,  do you want to add more work-descriptions to your resume ?');
+	work[0].push(document.getElementById('com1').value);
+	work[1].push(document.getElementById('role1').value.toUpperCase());
+	work[2].push(document.getElementById('dur1').value);
+	work[3].push(document.getElementById('wordes1').value);
+
+	
+	var confirmation = confirm('A new work experience added to skill set, do you want to add more work experience to your resume ?');
 
 	if(confirmation===false){
-		localStorage.setItem('workName',JSON.stringify(work[0]));
-		localStorage.setItem('workDesc',JSON.stringify(work[1]));
+		localStorage.setItem('companyName',JSON.stringify(work[0]));
+		localStorage.setItem('role',JSON.stringify(work[1]));
+		localStorage.setItem('duration',JSON.stringify(work[2]));
+		localStorage.setItem('description',JSON.stringify(work[3]));
 	}
 
 	else{
 	document.getElementById("wform").reset();
 	}
+
+
+
+return work;
 }
+
+
 
 
 
