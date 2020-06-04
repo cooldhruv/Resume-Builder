@@ -1,14 +1,14 @@
-ar arr = JSON.parse(localStorage.getItem('session'));
+var arr = JSON.parse(localStorage.getItem('session'));
 
 document.getElementById('name2').innerHTML = arr[0];
 document.getElementById('contact2').innerHTML = '<i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>'+arr[1];
 document.getElementById('email2').innerHTML = '<i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>'+arr[2];
 document.getElementById('address2').innerHTML = '<i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal" ></i>'+arr[3];
 document.getElementById('op2').innerHTML = '<i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal" ></i>'+arr[4];
-document.getElementById('q2').innerHTML = '<b style = "margin-right: 10%;">'+'Qualification: '+'</b>'+arr[5];
-document.getElementById('i2').innerHTML = '<b style = "margin-right: 17%;">'+'Institute: '+'</b>'+arr[6];
+document.getElementById('q2').innerHTML = '<b style = "margin-right: 10%;">'+'Qualification: '+'</b>'+arr[6];
+document.getElementById('i2').innerHTML = '<b style = "margin-right: 17%;">'+'Institute: '+'</b>'+arr[7];
 
-document.getElementById('p2').innerHTML = '<b style = "margin-right: 12%;">'+'Percentage: '+'</b>'+arr[7]+'%';
+document.getElementById('p2').innerHTML = '<b style = "margin-right: 12%;">'+'Percentage: '+'</b>'+arr[8]+'%';
 
 
 var skillName = JSON.parse(localStorage.getItem('skillName'));
@@ -39,10 +39,27 @@ for(var i =0;i<skillName.length;i++){
 
 }
 
-var WokName  = JSON.parse(localStorage.getItem('workName'));
-var WorkDesk = JSON.parse(localStorage.getItem('workDesk'));
+document.getElementById('roller').innerHTML = '<h6 style = "color: gray;">'+'('+arr[5]+')'+'</h6>';
 
-if(workName.length!=0){
-	document.getElementById('workoholic').innerHTML = '<h2 class="w3-text-grey w3-padding-16">'+'<i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal">'+'</i>'+'Work Experience'+'</h2>';
-		
+var comName = JSON.parse(localStorage.getItem('companyName'));
+var wRole = JSON.parse(localStorage.getItem('role'));
+var wDuration = JSON.parse(localStorage.getItem('duration'));
+var wDescription = JSON.parse(localStorage.getItem('description'));
+
+
+    var addingWork = document.getElementById('workoholic');
+
+ addingWork.innerHTML = '';
+ 
+
+
+
+ 		addingWork.innerHTML += '<div class="w3-container w3-card w3-white">'+ '<h2 class="w3-text-grey w3-padding-16">'+ '<i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal">' + '</i>'+'Work Experience'+'</h2>'+'</div>';
+		for(var i =0;i<comName.length;i++){
+				var WorkN = comName[i];
+				var WorkR = wRole[i];
+				var WorkD = wDuration[i];
+				var workDe = wDescription[i];
+
+				addingWork.innerHTML += '<BR>'+'<div class="w3-container w3-card w3-white">'+'<h5 class="w3-opacity">'+'<b>'+wRole[i]+' at: '+'</b>'+'</h5>'+'<h5 class="w3-opacity">'+'<b>'+comName[i]+'</b>'+'</h5>'+'<h6 class="w3-text-teal">'+'<i class="fa fa-calendar fa-fw w3-margin-right">'+'</i>'+wDuration[i]+'</h6>'+'<p>'+wDescription[i]+'</p>'+'<hr>'+'</div>';
 	}
