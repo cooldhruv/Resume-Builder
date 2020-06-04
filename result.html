@@ -1,174 +1,91 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Jekyll v4.0.1">
-    <title>Resume Builder By Dhruv</title>
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+</style>
+<body class="w3-light-grey">
 
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
   
+    <!-- Left Column -->
+    <div class="w3-third">
 
- 
-<link href="bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="bootstrap.css">
-
-
-
-
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-  </head>
-  <body class="bg-light" >
-    <div class="container">
-  <div class="py-5 text-center">
-    <img class="d-block mx-auto mb-4" src="icon.ico" alt="" width="72" height="72">
-    <h2>Resume Builder</h2>
-    <p class="lead">A Lucrative way to build your resume in few easy steps</p>
-  </div>
-
- <center>
-    <div class="col-md-8 order-md-1">
-      <h4 class="mb-3">Personal Details</h4>
-      <form class="needs-validation" id="frm1" NAME="yourform">
-      
-          <div class="mb-3">
-            <label for="firstName">Your Name Here</label>
-            <input type="text" class="form-control" id="firstName" name = "naam" value="" required>
-         </div>
-        
-         
-        <div class="mb-3">
-          <label for="c1">Contact No.  <span class="text-muted">(including country code)<span></label>
-            <input type="text" class="form-control" id="c1" name = "phone" required>
+       <div class="w3-display-container" style="margin-top: -0.8em;">
+         <!--  <img src="/w3images/avatar_hat.jpg" style="width:100%" alt="Avatar"> -->
+          <h2 >
+          <div class="w3-twothird" id="name2" style="margin: 0.6em; color: gray;">
             
           </div>
-  
-
-        <div class="mb-3">
-          <label for="email">Email </label>
-          <input type="email" class="form-control" id="email1" name = "mail" required>
-        </div>
-
-
-
-        <div class="mb-3">
-          <label for="address1">Address <span class="text-muted">(including state and country)</span></label>
-          <input type="text" class="form-control" id="address1" name = "pata" required>
-        </div>
-       
-       <div class="mb-3">
-          <label for="address2">Other Online Presence<span class="text-muted">(Optional)</span></label>
-          <input type="text" class="form-control" id="op1" name = "jaankari">
-        </div>
-        <br>
-     
-      <h4 class="mb-3">Educational Details</h4>
-       <div class="mb-3">
-          <label for="q1">Qualification:<span class="text-muted"></span></label>
-          <input type="text" class="form-control" id="q1" placeholder="">
-        </div>
+          </h2>
+          <div class="w3-container w3-card w3-white w3-margin-bottom" id="roller" style=" color: gray;">
       
-         <div class="mb-3">
-          <label for="i1">Institute:<span class="text-muted"></span></label>
-          <input type="text" class="form-control" id="i1" placeholder="">
+      </div>
+          
         </div>
-       
-         <div class="mb-3">
-          <label for="perc1">Percentage:<span class="text-muted"></span></label>
-          <input type="text" class="form-control" id="perc1" placeholder="">
-        </div>
-
-        <div class="mb3" id="ski" style="width: 100%; " ></div>
-      
-         <br>
-        <!-- <center>
-      <button class="btn btn-primary" id="flwork" onclick="workflag();" style="width: 14em;">Add Work Experience</button>
-      </center>
-            <br>
-
-             <center>
-      <button class="btn btn-primary" id="flpro" onclick="projectflag();" style="width: 14em;">Add Projects</button>
-      </center>
-      <br>
-      -->
-  <h3>Skill Details</h3>
-       </form >
-       
-       <form id = "skiform" name = "skillform">
-        <div class="mb-3">
-          <label for="i1">Skill :<span class="text-muted"></span></label>
-          <input type="text" class="form-control" id="s1" placeholder="">
-        </div>
-       
-         <div class="mb-3">
-          <label for="perc1">Proficiency:<span class="text-muted"></span></label>
-          <input type="text" class="form-control" id="sl1" placeholder="beginner , intermediate, expert, pro">
-        </div>
-
-      <input type="button" class="btn btn-primary" id="flskill"  style="width: 14em;" value="Add Skill"></input>
-      </form>
-<br>
-<br>
-      <form id = "wform" name = "skillform">
-        <h3>Work Details</h3>
-        <div class="mb-3">
-          <label for="com1">Company <span class="text-muted">(With Duration in brackets)</span> :</label>
-          <input type="text" class="form-control" id="com1" placeholder="">
-        </div>
-        <div class="mb-3">
-          <label for="com1">Your Role <span class="text-muted"></span> :</label>
-          <input type="text" class="form-control" id="role1" placeholder="">
-        </div>
-       
-         <div class="mb-3">
-          <label for="wordes1">Description: <span class="text-muted"></span></label>
-          <textarea style="border: 0px; width: 100%; height: 10em; border: solid 1px lightgray; border-radius: 5%" id="wordes1"></textarea>
-        </div>
-
-      <input type="button" class="btn btn-primary" id="flwork"  style="width: 14em;" value="Add Work-Experience"></input>
-      </form>
-      <br>
-      <br>
-
-        <button class="btn btn-primary btn-lg btn-block" type="submit" id="myF">Submit Resume</button>
-        <br>
-        <button class="btn btn-primary btn-lg btn-block" type="submit" id="myF2">Clear Resume</button>
-     
-      <br>
-      <form action = "result.html">
-        <button class="btn btn-primary btn-lg btn-block" type="submit">See Resume</button>
-      </form>
-    </div>
-  </div>
-
-</center>
-   <hr class="mb-4">
-  <footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">&copy; Dhruv Bhatt</p>
     
-  </footer>
+      <div class="w3-white w3-text-grey w3-card-4">
+       
+        <div class="w3-container">
+          <br>
+         <p class="w3-large"><b><i class="fa fa-male" style="color: #5B9E85"></i> Personal Details</b></p>
+          <p ><div id="contact2"></div></p>
+          <p ><div id="email2"></div></p>
+          <p><div id="address2"></div></p>
+          <p><div id="op2"></div></p>
+         
+          <br>
+          <p class="w3-large"><b><i class="fa fa-book" style="color: #5B9E85"></i> &nbsp; &nbsp;Education</b></p>
+          <p id="q2"></p>
+        
+          <p id="i2"></p>
+          
+         
+          <p id="p2"></p>
+
+          <br>
+
+          <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal" style="size: 36px; "></i>Skills</b></p>
+          <div id="boc"></div>
+          
+          <br>
+        </div>
+      </div><br>
+
+    
+    </div>
+
+    <!-- Right Column -->
+    <div class="w3-twothird" id="workoholic">
+
+
+     
+      </div>
+
+    <!-- End Right Column -->
+   <!--  </div>
+     -->
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
 </div>
+</div>
+</div>
+ <hr>
+<footer class="w3-container w3-teal w3-center w3-margin-top">
 
-
+</footer>
+<script type="text/javascript" src="creator2.js"></script>
 </body>
-<script type="text/javascript" src="creator.js"></script>
 </html>
 
