@@ -47,15 +47,31 @@ var wDuration = JSON.parse(localStorage.getItem('duration'));
 var wDescription = JSON.parse(localStorage.getItem('description'));
 
 
-    var addingWork = document.getElementById('workoholic');
+   
+  var addingWork = document.getElementById('workoholic2');
+
+  var addingwork2 = document.getElementById('workoholic1');
+console.log(comName);
+
+ 		if(comName=== null){
+
+ 			addingwork2.innerHTML = '';
+ 		}	
+ 				
+
+ 			else
+ 			{
+ 				addingwork2.innerHTML = '<div class="w3-container w3-card w3-white">'+ '<h2 class="w3-text-grey w3-padding-16">'+ '<i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal">' + '</i>'+'Work Experience'+'</h2>'+'</div>';
+ 			}
+ 			
+ 			
+ 	
 
  addingWork.innerHTML = '';
- 
 
+ if (wRole!=null) {
 
-
- 		addingWork.innerHTML += '<div class="w3-container w3-card w3-white">'+ '<h2 class="w3-text-grey w3-padding-16">'+ '<i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal">' + '</i>'+'Work Experience'+'</h2>'+'</div>';
-		for(var i =0;i<comName.length;i++){
+ 	for(var i =0;i<comName.length;i++){
 				var WorkN = comName[i];
 				var WorkR = wRole[i];
 				var WorkD = wDuration[i];
@@ -63,3 +79,25 @@ var wDescription = JSON.parse(localStorage.getItem('description'));
 
 				addingWork.innerHTML += '<BR>'+'<div class="w3-container w3-card w3-white">'+'<h5 class="w3-opacity">'+'<b>'+wRole[i]+' at: '+'</b>'+'</h5>'+'<h5 class="w3-opacity">'+'<b>'+comName[i]+'</b>'+'</h5>'+'<h6 class="w3-text-teal">'+'<i class="fa fa-calendar fa-fw w3-margin-right">'+'</i>'+wDuration[i]+'</h6>'+'<p>'+wDescription[i]+'</p>'+'<hr>'+'</div>';
 	}
+ }
+ 			
+ 		var prName = JSON.parse(localStorage.getItem('projecttitle'));
+
+var prDescription = JSON.parse(localStorage.getItem('projectDescription'));
+
+
+    var addingproject = document.getElementById('hoja');
+
+ addingproject.innerHTML = '';
+ 
+
+
+ 		if(prName!= null){
+ 			addingproject.innerHTML += '<div class="w3-container w3-card w3-white">'+ '<h2 class="w3-text-grey w3-padding-16">'+ '<i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal">' + '</i>'+'Projects'+'</h2>'+'</div>';
+ 			for(var i =0;i<prName.length;i++){
+				
+
+				addingproject.innerHTML += '<BR>'+'<div class="w3-container w3-card w3-white">'+'<h5 class="w3-opacity">'+'<b>'+prName[i]+'</b>'+'</h5>'+'<p>'+prDescription[i]+'</p>'+'<hr>'+'</div>';
+	}
+
+ 		}
