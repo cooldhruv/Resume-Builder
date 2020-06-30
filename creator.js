@@ -5,6 +5,7 @@ var a = document.getElementById('myF').addEventListener('click', addPersonal);
 var b = document.getElementById('flskill').addEventListener('click',skillAdd);
 var c = document.getElementById('myF2').addEventListener('click',clear);
 var d = document.getElementById('flwork').addEventListener('click',workAdd);
+const rt = document.getElementById('flproject').addEventListener('click',projectAdd);
 
 
 function addPersonal(e){
@@ -91,7 +92,7 @@ function workAdd(){
 	work[3].push(document.getElementById('wordes1').value);
 
 	
-	var confirmation = confirm('A new work experience added to skill set, do you want to add more work experience to your resume ?');
+	var confirmation = confirm('A new work experience is added to skill set, do you want to add more work experience to your resume ?');
 
 	if(confirmation===false){
 		localStorage.setItem('companyName',JSON.stringify(work[0]));
@@ -109,6 +110,30 @@ function workAdd(){
 return work;
 }
 
+
+const project = [[]]
+
+project[0] = new Array();
+project[1] = new Array();
+
+function projectAdd(){
+	project[0].push(document.getElementById('pt1').value);
+	project[1].push(document.getElementById('pd1').value);
+
+	let confirmation = confirm('A new project is added to the resume, do you wish to add more ?')
+
+	if(confirmation ===false){
+		localStorage.setItem('projecttitle',JSON.stringify(project[0]));
+	localStorage.setItem('projectDescription',JSON.stringify(project[1]));
+	}
+	
+	else{
+		document.getElementById('prform').reset();
+	}
+
+	
+	return project;
+}
 
 
 
